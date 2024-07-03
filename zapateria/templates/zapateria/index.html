@@ -1,0 +1,49 @@
+{% extends "zapateria/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-slider">
+  <div class="slider" id="slider">
+    <div class="slider__section">
+      <img src="{% static 'assets/IMG/adidas_ultrabounce.avif' %}" alt="" class="slider___img">
+      <div class="slider__content">
+        <h2 class="" slider__title>Productos</h2>
+        <p class="slider__txt">Visita nuestra coleccion de Zapatillas</p>
+        <a href="./usuario/Productos.html" class="slider__link">Cotizar ahora</a>
+      </div>
+    </div>
+    <div class="slider__section">
+      <img src="{% static 'assets/IMG/zapatillas_adidas.avif' %}" alt="" class="slider___img">
+      <div class="slider__content">
+        <h2 class="" slider__title>Cuenta</h2>
+        <p class="slider__txt">Ingresa con tu cuenta</p>
+        <a href="{% url 'logear' %}" class="slider__link">Ingreso</a>
+      </div>
+    </div>
+    <div class="slider__section">
+      <img src="{% static 'assets/IMG/nike_azul.webp' %}" alt="" class="slider___img">
+      <div class="slider__content">
+        <h2 class="" slider__title>Nosotros</h2>
+        <p class="slider__txt">Acerca de nuestro compromiso</p>
+        <a href="{% url 'nosotros' %}" class="slider__link">Ver</a>
+      </div>
+    </div>
+    <div class="slider__section">
+      <img src="{% static 'assets/IMG/adidas_blanc_color.webp' %}" alt="" class="slider___img">
+      <div class="slider__content">
+        <h2 class="" slider__title>Adidas</h2>
+        <p class="slider__txt">Visita nuestra coleccion de zapatillas Adidas</p>
+        <a href="./usuario/Productos.html" class="slider__link">Cotizar ahora</a>
+      </div>
+    </div>
+  </div>
+  <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+  <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+</div><hr>
+<aside>
+  <img src="{% static 'assets/img/Zapatería San Antonio1.png' %}" alt="">
+</aside><hr>
+
+{% endblock %}

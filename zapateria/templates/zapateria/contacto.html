@@ -1,0 +1,21 @@
+{% extends "zapateria/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="text-center">Nuestro Contacto</h1>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <img src="{% static 'assets/img/Logo.png' %}" class="img-fluid" alt="Nuestra Zapatería">
+        </div>
+        <div class="col-md-6">
+            <p>Puedes encontrar nuestra tienda fisica en San Antonio 272, Santiago, Región Metropolitana y nuestro codigo postal es 8320201</p>
+            <p>Si deseas mandarnos mensajes para hacer consultas puedes contactarnos a este email Zapatillaantonio@gmail.cl</p>
+            <p>Si deseas hacer cualquier reclamo puedes llamar a nuestro numero +56939443461</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

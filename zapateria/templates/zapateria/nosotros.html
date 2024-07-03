@@ -1,0 +1,21 @@
+{% extends "zapateria/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container my-5">
+    <h1 class="text-center">Acerca de Nosotros</h1>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <img src="{% static 'assets/img/Logo.png' %}" class="img-fluid" alt="Nuestra Zapatería">
+        </div>
+        <div class="col-md-6">
+            <p>Somos una zapatería comprometida con ofrecer el mejor calzado para toda la familia. Fundada en 1990, nuestra misión ha sido siempre proporcionar productos de calidad y un servicio al cliente excepcional.</p>
+            <p>Contamos con una amplia variedad de marcas y estilos, desde lo clásico hasta lo más moderno. Nuestro equipo está siempre disponible para ayudarte a encontrar el zapato perfecto para cualquier ocasión.</p>
+            <p>Visítanos en nuestra tienda física o explora nuestro catálogo en línea. ¡Te esperamos!</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

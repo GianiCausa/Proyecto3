@@ -1,0 +1,24 @@
+{% extends "zapateria/base.html" %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div class="container bg-dark mt-5 pt-3 pb-3 rounded mb-5">
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 text-white m-auto">
+                <h1>Registro</h1>
+                <form action="" method="post">
+                    {% csrf_token %}
+
+                    {{form|crispy}}
+
+                    <button type="submit" class="btn btn-success mt-4">Registrate</button>
+                </form>
+            </div>                            
+        </div><!--Fin div row-->
+    </div><!--Fin div container-->
+
+{% endblock %}

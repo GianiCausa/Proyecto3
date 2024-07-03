@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Zapatillas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+<body>
+  <!--NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="../assets/img/Logo.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+        aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../nosotros.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../cuenta.html">Cuenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../usuario/Productos.html">Productos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+      <h1>Catálogo de Zapatillas</h1>
+
+      <!-- Formulario para agregar zapatillas -->
+      <form id="form-agregar-zapatilla" class="mb-4">
+          <div class="row g-3">
+              <div class="col-md-3">
+                  <input type="text" id="marca" class="form-control" placeholder="Marca" required>
+              </div>
+              <div class="col-md-3">
+                  <input type="text" id="modelo" class="form-control" placeholder="Modelo" required>
+              </div>
+              <div class="col-md-2">
+                  <input type="number" id="talla" class="form-control" placeholder="Talla" required>
+              </div>
+              <div class="col-md-2">
+                  <input type="number" id="precio" class="form-control" placeholder="Precio" required>
+              </div>
+              <div class="col-md-2">
+                  <button type="submit" class="btn btn-primary w-100">Agregar Zapatilla</button>
+              </div>
+          </div>
+      </form>
+
+      <!-- Campo de búsqueda -->
+      <input type="text" id="buscar" class="form-control mb-4" placeholder="Buscar por marca">
+
+      <!-- Lista de zapatillas -->
+      <div id="zapatillas-lista"></div>
+      
+      <!-- Paginación -->
+      <nav>
+          <ul class="pagination justify-content-center" id="paginacion"></ul>
+      </nav>
+  </div>
+
+  <!-- Modal para detalles de la zapatilla -->
+  <div class="modal fade" id="detallesModal" tabindex="-1" aria-labelledby="detallesModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="detallesModalLabel">Detalles de la Zapatilla</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" id="detallesCuerpo">
+                  <!-- Detalles de la zapatilla se llenarán dinámicamente -->
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+4lnt/smI4lZT+LbDVCSTou3lE4D2" crossorigin="anonymous"></script>
+  <script src="./assets/js/inventario.js"></script>
+</body>
+</html>
