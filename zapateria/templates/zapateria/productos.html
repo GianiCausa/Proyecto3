@@ -1,0 +1,24 @@
+{% extends "zapateria/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row mt-3">
+      <div class="col">
+          <select id="filtroMarca" class="form-control" onchange="aplicarFiltros()">
+              <option value="todos">Todas las marcas</option>
+          </select>
+          <select id="filtroTalla" class="form-control mt-2" onchange="aplicarFiltros()">
+              <option value="todos">Todas las tallas</option>
+          </select>
+          <select id="filtroGenero" class="form-control mt-2" onchange="aplicarFiltros()">
+              <option value="todos">Todos los géneros</option>
+          </select>
+      </div>
+  </div>
+  <div class="row mt-3" id="personajesRow"></div>
+</div>
+
+{% endblock %}

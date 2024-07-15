@@ -8,7 +8,7 @@ def logear(request):
 
 def productos(request):
     context={}
-    return render(request, "../../../productos/templates/Productos/Productos.html", context)
+    return render(request, "zapateria/productos.html", context)
 
 
 def index(request):
